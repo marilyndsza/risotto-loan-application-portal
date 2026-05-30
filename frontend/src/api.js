@@ -9,7 +9,7 @@ async function request(path, options = {}) {
       ...options
     });
   } catch (_err) {
-    throw new Error(`Cannot reach the API at ${API}. The backend may be waking up; retry in a moment.`);
+    throw new Error('Unable to reach the server. It may be waking up; retry in a moment.');
   }
 
   const data = await response.json().catch(() => null);
